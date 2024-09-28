@@ -11,7 +11,10 @@ public class BuyandSell {
            if(cost_price>=prices[i]){
               cost_price=prices[i];
            }
-           profit=Math.max(profit,prices[i]-cost_price);
+           int current_profit = prices[i] - cost_price;
+           if(current_profit > profit) {
+                profit = current_profit;
+           }
         }
         return profit;
     }
